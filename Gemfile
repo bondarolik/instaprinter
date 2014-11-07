@@ -33,8 +33,8 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-#gem "bcrypt-ruby", "~> 3.1.9"
-gem 'bcrypt-ruby', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+gem "bcrypt-ruby", "~> 3.1.2"
+#gem 'bcrypt-ruby', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 gem 'warden'
 
