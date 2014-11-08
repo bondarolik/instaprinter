@@ -39,6 +39,12 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'warden'
 
+gem 'bootstrap-sass', '~> 3.3.0'
+gem 'autoprefixer-rails'
+
+# only windows
+#gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
