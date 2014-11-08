@@ -8,6 +8,8 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+#gem 'bootstrap-sass', '~> 3.3.0'
+#gem 'autoprefixer-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -38,6 +40,9 @@ gem 'bcrypt', '~> 3.1.7'
 #gem 'bcrypt-ruby', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 gem 'warden'
+
+# only windows
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # Use unicorn as the app server
 # gem 'unicorn'
