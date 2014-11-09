@@ -2,9 +2,12 @@
 <html>
 <head>
   <title>SpicyOrangesWebsite</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700italic,400italic' rel='stylesheet' type='text/css' />
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -14,24 +17,10 @@
   <![endif]-->  
 </head>
 <body>
-
-<div id="container">
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-<% end %>
-
-<div id="user_nav">
-<% if current_user %>
-  Logged in as <%= current_user.email %>.
-  <%= link_to "Log out", logout_path %>
-<% else %>
-  <%= link_to "Sign up", signup_path %> or
-  <%= link_to "log in", login_path %>
-<% end %>
-</div>
- 
+<div id="container"> 
+<%= render "header" %>
 <%= yield %>
+<%= render "footer" %>
 </div>
-
 </body>
 </html>
