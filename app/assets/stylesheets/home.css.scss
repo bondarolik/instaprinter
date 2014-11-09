@@ -19,6 +19,6 @@ $nav-pills-active-link-hover-bg: #009846;
 @import "bootstrap";
 
 body { font-family: 'Roboto Condensed', sans-serif; }
-.container { margin: 0 auto; }
+.container { width: 970px; margin: 0 auto; }
 ul#menubar { text-align: right; }
 ul#menubar { padding-top: 10px; }
