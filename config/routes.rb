@@ -14,6 +14,14 @@ SpicyOrangesWebsite::Application.routes.draw do
 
   resources :pages
   resources :productos
+
+  # special pages
+  get 'inicio' => 'pages#inicio', as: :pages_inicio
+  get 'empresa' => 'pages#empresa', as: :pages_empresa
+  get 'trabajos' => 'pages#trabajos', as: :pages_trabajos
+  get 'contacto' => 'pages#contacto', as: :pages_contacto
+
+
    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
