@@ -4,7 +4,7 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 
 $body-bg: #f9f9f9;
-$text-color: #36393D;
+$text-color: #5d5d5d;
 $link-color: #009846;
 $link-hover-color: #009994;
 // $link-hover-color: darken($link-color, 15%);
@@ -43,6 +43,9 @@ ul#menubar { padding-top: 25px; }
 
 #feedbacks img { margin-top: 20px; }
 
-
+#footer {
+  background-color: #171717;
+  color: #5d5d5d;
+}
 
 
