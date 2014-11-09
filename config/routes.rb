@@ -7,7 +7,7 @@ SpicyOrangesWebsite::Application.routes.draw do
 
   get 'logout' => 'sessions#destroy', as: :logout
 
-  root 'home#index'
+  root 'pages#inicio'
 
   resources :users
   resources :sessions
