@@ -2,9 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+$body-bg: #f9f9f9;
+$text-color: #36393D;
+$link-color: #009846;
+$link-hover-color: #009994;
+// $link-hover-color: darken($link-color, 15%);
+
+$nav-link-padding: 5px 8px;
+$nav-link-hover-bg: none;
+
+$nav-pills-border-radius: $border-radius-base;
+$nav-pills-active-link-hover-bg: none;
+//$nav-pills-active-link-hover-color
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 body {
   font-family: 'Roboto Condensed', sans-serif
+}
+
+.container {
+  margin: 0 auto;
 }
