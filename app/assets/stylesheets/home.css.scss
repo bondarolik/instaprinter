@@ -3,8 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 
-$container: 670px;
-
 $body-bg: #f9f9f9;
 $text-color: #36393D;
 $link-color: #009846;
@@ -22,6 +20,6 @@ $nav-pills-active-link-hover-bg: #009846;
 @import "bootstrap";
 
 body { font-family: 'Roboto Condensed', sans-serif; }
-//.container { width: 970px; margin: 0 auto; }
+.container { width: 970px; margin: 0 auto; }
 ul#menubar { text-align: right; }
 ul#menubar { padding-top: 10px; }
