@@ -7,4 +7,7 @@ class ProductosController < ApplicationController
 
   def mallasdeproteccion
   end
+
+  def ventanaspvc
+  end
 end
