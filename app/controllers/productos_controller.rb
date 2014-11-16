@@ -1,13 +1,53 @@
 class ProductosController < ApplicationController
-  def showerroom
+  skip_before_action :require_login, only: [:index, :show]
+
+  def index
+    @productos = Producto.all
   end
 
-  def puertasprotex
+  def new
+    @producto = Producto.new
   end
 
-  def mallasdeproteccion
+  def create
+    #render plain: params[:productos].inspect
+    @producto = Producto.new(producto_params)
+   
+    if @producto.save
+      redirect_to @producto
+    else
+      render 'new'
+    end     
   end
 
-  def ventanaspvc
+  def edit
+    @producto = Producto.find(params[:id])  
   end
+
+  def update
+    @producto = Producto.find(params[:id])
+   
+    if @producto.update(producto_params)
+      redirect_to @producto
+    else
+      render 'edit'
+    end 
+  end
+
+  def show
+    @producto = Producto.find(params[:id])
+    @productos_links = Producto.all
+  end
+
+  def destroy
+    @producto = Producto.find(params[:id])
+    @producto.destroy
+   
+    redirect_to productos_path
+  end
+
+private
+  def producto_params
+    params.require(:producto).permit(:title, :slug, :description)
+  end  
 end

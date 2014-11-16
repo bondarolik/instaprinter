@@ -1,0 +1,18 @@
+<div id="content" class="row">
+  <div class="col-md-4">
+    <h1>Nuestros Productos</h1>
+
+    <div class="list-group">
+      <%= link_to "Ventanas PVC", root_path, :class => "list-group-item" %>
+      <%= link_to "Shower Room", root_path, :class => "list-group-item" %>
+      <%= link_to "Puertas Protex", root_path, :class => "list-group-item" %>
+      <%= link_to "Mallas de Protección", root_path,:class => "list-group-item" %>
+    </div>
+  </div>
+
+  <div class="spicycontent col-md-8">
+  <%= @producto.description.html_safe %>
+  </div>
+
+  <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
+</div>
