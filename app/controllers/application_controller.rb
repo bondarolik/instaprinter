@@ -15,7 +15,7 @@ private
   end
 
   def require_login
-    unless current_user?
+    unless current_user.nil?
       flash[:error] = "You must be logged in to access this section"
       redirect_to login_url # halts request cycle
     end
