@@ -22,7 +22,10 @@ SpicyOrangesWebsite::Application.routes.draw do
   get 'contacto' => 'pages#contacto', as: :pages_contacto
 
 
-   
+  # Products pages
+  get 'productos/showerroom' => 'productos#showerroom', as: :products_showerroom
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
