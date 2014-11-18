@@ -23,7 +23,7 @@ SpicyOrangesWebsite::Application.routes.draw do
 
 
   # Products pages
-  get 'productos/showerroom' => 'productos#showerroom', as: :products_showerroom
+  #get 'productos/showerroom' => 'productos#showerroom', as: :products_showerroom
 
 
   # The priority is based upon order of creation: first created -> highest priority.
