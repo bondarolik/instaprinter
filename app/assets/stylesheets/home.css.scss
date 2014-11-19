@@ -61,13 +61,13 @@ ul#menubar { padding-top: 25px; }
 }
 
 .fcontent { padding: 25px 0 40px 0; }
-.fcontent a { padding-top: 10px; }
+.fcontent a { padding-top: 20px; }
 .fcontent a, .fcontent a:visited {
   text-decoration: none;
   color: #5d5d5d;
 }
 .fcontent a:hover { color: #1d1d1d; }
-.loginlink { text-align: right; }
+.loginlink { float: right; }
 
 .spicysep { margin: 40px 0; }
 #imagenav { padding-bottom: 40px; }
