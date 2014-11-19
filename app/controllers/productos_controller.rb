@@ -1,13 +1,16 @@
 class ProductosController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
-  add_breadcrumb "home", :root_path, :options => { :title => "Inicio" }
+  add_breadcrumb "Inicio", :root_path, :options => { :title => "Inicio" }
 
   def index
     @productos = Producto.all
+    add_breadcrumb "Listado de productos", producto_path
   end
 
   def new
     @producto = Producto.new
+
+    add_breadcrumb "Agregar nuevo producto", producto_path
   end
 
   def create
@@ -22,7 +25,9 @@ class ProductosController < ApplicationController
   end
 
   def edit
-    @producto = Producto.find(params[:id])  
+    @producto = Producto.find(params[:id])
+
+    add_breadcrumb "Redactar ", producto_path, :options => { :title => @producto.title }
   end
 
   def update
@@ -37,9 +42,8 @@ class ProductosController < ApplicationController
 
   def show
     @producto = Producto.find(params[:id])
-    #@productos_links = Producto.all
 
-    add_breadcrumb "show", producto_path, :options => { :title => @producto.title }
+    add_breadcrumb "Producto: ", producto_path, :options => { :title => @producto.title }
   end
 
   def destroy
