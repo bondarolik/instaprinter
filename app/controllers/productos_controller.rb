@@ -4,13 +4,13 @@ class ProductosController < ApplicationController
 
   def index
     @productos = Producto.all
-    add_breadcrumb "Listado de productos", producto_path
+    add_breadcrumb "Listado de productos", ''
   end
 
   def new
     @producto = Producto.new
 
-    add_breadcrumb "Agregar nuevo producto", producto_path
+    add_breadcrumb "Agregar nuevo producto", ''
   end
 
   def create
@@ -27,7 +27,7 @@ class ProductosController < ApplicationController
   def edit
     @producto = Producto.find(params[:id])
 
-    add_breadcrumb "Redactar ", producto_path, :options => { :title => @producto.title }
+    add_breadcrumb "Redactar ", '', :options => { :title => @producto.title }
   end
 
   def update
@@ -43,7 +43,7 @@ class ProductosController < ApplicationController
   def show
     @producto = Producto.find(params[:id])
 
-    add_breadcrumb "Producto: ", producto_path, :options => { :title => @producto.title }
+    add_breadcrumb "Producto: ", producto_path(@producto.id), :options => { :title => @producto.title }
   end
 
   def destroy
