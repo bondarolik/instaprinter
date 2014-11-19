@@ -3,10 +3,9 @@
     <h1>Nuestros Productos</h1>
 
     <div class="list-group">
-      <%= link_to "Ventanas PVC", root_path, :class => "list-group-item" %>
-      <%= link_to "Shower Room", root_path, :class => "list-group-item" %>
-      <%= link_to "Puertas Protex", root_path, :class => "list-group-item" %>
-      <%= link_to "Mallas de Protección", root_path,:class => "list-group-item" %>
+    <% product_list.each do |p| %>
+      <%= link_to p.title, producto_path(p.id), :class => "list-group-item" %>
+    <% end %>
     </div>
   </div>
 

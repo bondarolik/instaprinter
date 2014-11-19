@@ -36,7 +36,7 @@ class ProductosController < ApplicationController
 
   def show
     @producto = Producto.find(params[:id])
-    @productos_links = Producto.all
+    #@productos_links = Producto.all
   end
 
   def destroy

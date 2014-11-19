@@ -13,10 +13,9 @@
           Productos <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-          <li><%= link_to "Ventanas PVC", root_path %></li>
-          <li><%= link_to "Shower Room", root_path %></li>
-          <li><%= link_to "Puertas Protex", root_path %></li>
-          <li><%= link_to "Mallas de Protección", root_path %></li>
+        <% product_list.each do |p| %>
+          <li><%= link_to p.title, producto_path(p.id), :class => "list-group-item" %></li>
+        <% end %>
         </ul>
       </li>
 
