@@ -16,5 +16,4 @@
 //= require bootstrap-sprockets
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales/es-ES
-//= require bootstrap-wysihtml5/locales/en-EN
 //= require_tree .
