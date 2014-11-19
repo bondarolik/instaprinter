@@ -3,24 +3,23 @@
 
   <div class="container">
   <div class="row fcontent">
-  
 
     <div class="col-md-2">
       <%= image_tag("logo-alumart.png", :alt => "Alumart Empresa", :width => 75, :title => "Empresa Alumart") %>
     </div>
 
     <div class="col-md-6">
-      <%= link_to "Inicio", pages_inicio_path %> |
-      <%= link_to "Quienes Somos", pages_empresa_path %> |
-      <%= link_to "Trabajos", pages_trabajos_path %> |
+      <%= link_to "Inicio", pages_inicio_path %> <span>|</span>
+      <%= link_to "Quienes Somos", pages_empresa_path %> <span>|</span>
+      <%= link_to "Trabajos", pages_trabajos_path %> <span>|</span>
       <%= link_to "Contacto", pages_contacto_path %>
     </div>
 
     <div class="col-md-4">
     <% if current_user %>
-      <%= link_to "Log out", logout_path %>
+      <%= link_to "Log out", logout_path, :class => "loginlink" %>
     <% else %>
-      <%= link_to "log in", login_path %>
+      <%= link_to "log in", login_pathm, :class => "loginlink" %>
     <% end %>     
     </div>
 
