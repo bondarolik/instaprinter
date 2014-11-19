@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+ 
+    <div class="navbar-header">
+     <%= link_to image_tag("a.png", :alt => "Alumart Brand", :title => "Logo Alumart"), root_path, :class => "navbar-brand" %>
+    </div>   
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <li><%= link_to "Ver productos", productos_path %></li>
+        <li><%= link_to "Agregar producto", new_producto_path %></li>
+      </ul>
+    </div>
+
+    <p class="navbar-text navbar-right">Ingresado como <strong><%= current_user.email %></strong>. <%= link_to "Salir", logout_path %></p>
+  </div>
+</nav>
