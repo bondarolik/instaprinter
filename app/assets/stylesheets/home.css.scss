@@ -26,7 +26,7 @@ ul#menubar { text-align: right; float: right; }
 ul#menubar { padding-top: 25px; }
 
 // positioning
-#header, #banners, #feedbacks, #products, #other, #footer, #crummybread { margin-top: 20px; }
+#header, #banners, #feedbacks, #products, #other, #crummybread { margin-top: 20px; }
 
 #banners {
   border-top: 1px #EDEDED solid;
@@ -55,7 +55,8 @@ ul#menubar { padding-top: 25px; }
 .centered { text-align: center; }
 
 #footer {
-  background: #171717 url("darkwood-darken.jpg") repeat-x;
+  margin-top: 40px;
+  background: #171717 url("darkwood.bg.jpg") repeat-x;
   color: #5d5d5d;
 }
 
