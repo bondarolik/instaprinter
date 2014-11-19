@@ -1,5 +1,5 @@
 <h1>Listing Articles</h1>
-<%= link_to 'New article', new_producto_path %>
+<%= link_to 'Agregar nuevo producto', new_producto_path %>
 <table>
   <tr>
     <th>Title</th>
@@ -11,10 +11,10 @@
   <tr>
     <td><%= producto.title %></td>
     <td><%= producto.description %></td>
-    <td><%= link_to 'Show', producto_path(producto) %></td>
-    <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
-    <td><%= link_to 'Destroy', producto_path(producto),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Ver', producto_path(producto.id) %></td>
+    <td><%= link_to 'Redactar', edit_producto_path(producto.id) %></td>
+    <td><%= link_to 'Eliminar', producto_path(producto.id),
+                    method: :delete, data: { confirm: 'Estas seguro?' } %></td>
   </tr>
 <% end %>
 </table>
