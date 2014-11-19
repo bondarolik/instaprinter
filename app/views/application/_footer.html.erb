@@ -1,4 +1,4 @@
-<div id="footer" class="container-fluid ">
+<div id="footer" class="container-fluid">
   <div class="row">
 
   <div class="container">
@@ -7,6 +7,7 @@
     <div class="col-md-1">
       <%= image_tag("logo-alumart.png", :alt => "Alumart Empresa", :width => 75, :title => "Empresa Alumart") %>
     </div><!--
+
     --><div class="col-md-7 vcenter">
     <p>
       <%= link_to "Inicio", pages_inicio_path %> <span>|</span>
@@ -15,12 +16,15 @@
       <%= link_to "Contacto", pages_contacto_path %>
     </p>
     </div><!--
+
     --><div class="col-md-4 vcenter">
+    <p class="text-right">
     <% if current_user %>
-      <%= link_to "Log out", logout_path, :class => "text-right" %>
+      <%= link_to "Log out", logout_path %>
     <% else %>
-      <%= link_to "log in", login_pathm, :class => "text-right" %>
-    <% end %>     
+      <%= link_to "log in", login_pathm %>
+    <% end %>
+    </p>
     </div>
 
   </div> 
