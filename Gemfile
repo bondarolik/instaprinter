@@ -42,7 +42,7 @@ gem 'warden'
 gem 'bootstrap-sass', '~> 3.3.0'
 gem 'bootstrap-wysihtml5-rails'
 gem 'autoprefixer-rails'
-
+gem 'active_link_to'
 gem "breadcrumbs_on_rails"
 
 # only windows
