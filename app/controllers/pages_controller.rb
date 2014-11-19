@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  #add_breadcrumb "home", :root_path, :options => { :title => "Inicio" }
+  add_breadcrumb "Inicio", :root_path, :options => { :title => "Inicio" }
 
   def inicio
   end

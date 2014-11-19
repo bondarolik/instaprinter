@@ -22,7 +22,7 @@
 <%= render "navbar" if current_user %>
 <%= render "header" %>
 
-<%= render "breadcrumbs" %>
+<%= render "breadcrumbs" if current_page?('/') %>
 
   <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
