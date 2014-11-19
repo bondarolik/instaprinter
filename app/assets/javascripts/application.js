@@ -17,3 +17,7 @@
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales/es-ES
 //= require_tree .
+
+$(document).on('page:load', function(){
+  window['rangy'].initialized = false
+})
