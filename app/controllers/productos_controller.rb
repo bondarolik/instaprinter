@@ -1,5 +1,6 @@
 class ProductosController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
+  add_breadcrumb "home", :root_path, :options => { :title => "Inicio" }
 
   def index
     @productos = Producto.all
@@ -37,6 +38,8 @@ class ProductosController < ApplicationController
   def show
     @producto = Producto.find(params[:id])
     #@productos_links = Producto.all
+
+    add_breadcrumb "show", producto_path, :options => { :title => @producto.title }
   end
 
   def destroy

@@ -43,6 +43,8 @@ gem 'bootstrap-sass', '~> 3.3.0'
 gem 'bootstrap-wysihtml5-rails'
 gem 'autoprefixer-rails'
 
+gem "breadcrumbs_on_rails"
+
 # only windows
 #gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
