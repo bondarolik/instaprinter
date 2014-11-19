@@ -4,20 +4,20 @@
   <div class="container">
   <div class="row fcontent">
 
-    <div class="col-md-1">
+    <div class="col-md-2">
       <%= image_tag("logo-alumart.png", :alt => "Alumart Empresa", :width => 75, :title => "Empresa Alumart") %>
-    </div><!--
+    </div>
 
-    --><div class="col-md-7 vcenter">
+    <div class="col-md-6 vcenter">
     <p>
       <%= link_to "Inicio", pages_inicio_path %> <span>|</span>
       <%= link_to "Quienes Somos", pages_empresa_path %> <span>|</span>
       <%= link_to "Trabajos", pages_trabajos_path %> <span>|</span>
       <%= link_to "Contacto", pages_contacto_path %>
     </p>
-    </div><!--
+    </div>
 
-    --><div class="col-md-4 vcenter">
+    <div class="col-md-4 vcenter">
     <p class="text-right">
     <% if current_user %>
       <%= link_to "Log out", logout_path %>
