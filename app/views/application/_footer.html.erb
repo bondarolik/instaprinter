@@ -6,16 +6,16 @@
 
     <div class="col-md-1">
       <%= image_tag("logo-alumart.png", :alt => "Alumart Empresa", :width => 75, :title => "Empresa Alumart") %>
-    </div>
-
-    <div class="col-md-7">
+    </div><!--
+    --><div class="col-md-7 vcenter">
+    <p>
       <%= link_to "Inicio", pages_inicio_path %> <span>|</span>
       <%= link_to "Quienes Somos", pages_empresa_path %> <span>|</span>
       <%= link_to "Trabajos", pages_trabajos_path %> <span>|</span>
       <%= link_to "Contacto", pages_contacto_path %>
-    </div>
-
-    <div class="col-md-4">
+    </p>
+    </div><!--
+    --><div class="col-md-4 vcenter">
     <% if current_user %>
       <%= link_to "Log out", logout_path, :class => "text-right" %>
     <% else %>
