@@ -40,6 +40,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'warden'
 
 gem 'bootstrap-sass', '~> 3.3.0'
+gem 'bootstrap-wysihtml5-rails'
 gem 'autoprefixer-rails'
 
 # only windows
