@@ -14,7 +14,7 @@
         </a>
         <ul class="dropdown-menu">
         <% product_list.each do |p| %>
-          <li><%= link_to p.title, producto_path(p.id), :class => "list-group-item" %></li>
+          <li><%= link_to p.title, producto_path(p.id) %></li>
         <% end %>
         </ul>
       </li>
