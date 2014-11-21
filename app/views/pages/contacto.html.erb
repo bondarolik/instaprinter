@@ -4,22 +4,54 @@
   </div>
 
   <div class="spicycontent col-md-8">
- 
+    <p>Nuestra empresa se encuentra en el barrio Las Condes. Pueden acercarse en oficina por dirección indicada mas abajo. También puede comunicarse con nosotros por siguientes numeros de telefono o enviar un mensaje desde el formulario web.</p>
+
+    <div class="list-group col-md-3">
+      <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">www.alumart.cl</h4>
+      <p class="list-group-item-text">
+        Av. Apoquindo 3304, Oficina 465<br/>
+        Las Condes, Santigo<br/>
+        Chile (CP 12345)
+      </p>
+      </a>
+    </div>
+
+    <div class="list-group col-md-3">
+      <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">Telefonos:</h4>
+      <p class="list-group-item-text">
+        <strong>Fijo</strong>: (56) 1234 5678<br/>
+        <strong>Movilsuccessstrong>: (569) 1234 5678<br/>
+        <strong>Email</strong>: info@alumart.cl
+      </p>
+      </a>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <%= form_tag sessions_path do %>
+      <div class="form-group">
+        <%= text_field_tag :name, "", :class => "form-control", :placeholder => "Ej. Juan Ignacio"  %>
+      </div>
+
+      <div class="form-group">
+        <%= email_field_tag :email, "", :class => "form-control", :placeholder => "email@ejemplo.com" %>
+      </div>
+
+      <div class="form-group">
+        <%= text_area_tag :message, "", :class => "form-control"  %>
+      </div>
+
+      <button type="submit" class="btn btn-success">Enviar mensaje</button>
+    <% end %> 
   </div>
 
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
 </div>
 
-<div id="imagenav" class="row">
-  <div class="col-md-4">
-    <%= image_tag("aboutus-1.jpg", :class => "img-thumbnail", :width => 300) %>
+<div class="row">
+  <div class="col-md-12">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6660.560885688618!2d-70.59682005106505!3d-33.41593217869651!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf156cf50c41%3A0xaf7ff4ecabd65d7a!2zQXBvcXVpbmRvIDMzMDAsIExhcyBDb25kZXMsIFJlZ2nDs24gTWV0cm9wb2xpdGFuYSwg0KfQuNC70Lg!5e0!3m2!1sru!2sar!4v1416586991869" width="900" height="300" frameborder="0" style="border:0"></iframe>
   </div>
-
-  <div class="col-md-4">
-    <%= image_tag("aboutus-2.jpg", :class => "img-thumbnail", :width => 300) %>
-  </div>
-
-   <div class="col-md-4">
-    <%= image_tag("aboutus-3.jpg", :class => "img-thumbnail", :width => 300) %>
-  </div> 
 </div>
