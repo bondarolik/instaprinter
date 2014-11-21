@@ -1,13 +1,24 @@
-<h1>Log in</h1>
+<div id="content" class="row">
+  <div class="col-md-5">
 
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %><br>
-    <%= text_field_tag :email, params[:email] %>
+    <h2>Area de administración</h2>
+
+    <%= form_tag sessions_path do %>
+      <div class="form-group">
+        <%= label_tag :email, "Email" %>
+        <%= email_field_tag :email, params[:email], :class => "form-control", :placeholder => "admin@example.com" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :password, "Email" %>
+        <%= password_field_tag :password, :class => "form-control" %>
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    <% end %>
   </div>
-  <div class="field">
-    <%= label_tag :password %><br>
-    <%= password_field_tag :password %>
+
+  <div class="col-md-7">
+    
   </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
-<% end %>
+</div>

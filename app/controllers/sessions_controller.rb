@@ -10,6 +10,6 @@ class SessionsController < ApplicationController
 
   def destroy
     warden.logout
-    redirect_to root_url, success: "Que tengas buen dia! Por hoy es todo! Gracias!"
+    redirect_to root_url, notice: "Que tengas buen dia! Por hoy es todo! Gracias!"
   end
 end
