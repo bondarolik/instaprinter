@@ -22,7 +22,7 @@
 <%= render "navbar" if current_user %>
 <%= render "header" %>
 
-<%= render 'layouts/flash_messages' %>
+<%= flash_messages %>
 
 <% flash.each do |name, msg| %>
 <%= content_tag :div, msg, :id => "flash_#{name}", :class => "alert alert-warning" %>
