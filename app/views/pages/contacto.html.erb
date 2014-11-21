@@ -18,7 +18,7 @@
   <div class="spicycontent col-md-8">
     <p>Nuestra empresa se encuentra en el barrio Las Condes. Pueden acercarse en oficina por dirección indicada. También puede comunicarse con nosotros por siguientes numeros de telefono o enviar un mensaje desde el formulario web.</p>
 
-    <h4 class="panel-title">Telefonos:</h4>
+    <h3 class="panel-title">Telefonos:</h3>
 
     <p>
       <strong>Fijo</strong>: (56) 1234 5678<br/>
@@ -32,7 +32,6 @@
         Chile (CP 12345)
     </p>
 
-    <div class="col-md-6">
     <%= form_tag sessions_path do %>
       <div class="form-group">
         <%= text_field_tag :name, "", :class => "form-control", :placeholder => "Ej. Juan Ignacio"  %>
@@ -48,7 +47,6 @@
 
       <button type="submit" class="btn btn-success">Enviar mensaje</button>
     <% end %> 
-    </div>
   </div>
 
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
