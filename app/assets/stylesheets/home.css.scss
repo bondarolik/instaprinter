@@ -9,9 +9,10 @@ $link-color: #009846;
 $link-hover-color: #009994;
 // $link-hover-color: darken($link-color, 15%);
 
-$nav-link-padding: 5px 8px;
+$nav-link-padding: 10px 8px;
 $nav-link-hover-bg: none;
 
+$nav-pills-border-color: none;
 $nav-pills-border-radius: 3px;
 $nav-pills-active-link-hover-bg: #009846;
 //$nav-pills-active-link-hover-color
@@ -77,6 +78,8 @@ ul#menubar { padding-top: 25px; }
 .list-group { 
   width: 90%; 
 }
+
+#sidebar .active { background-color: #009846; }
 
 div.vcenter p { margin-top: 10px; }
 div.vcenter span { margin: 0 5px; }
