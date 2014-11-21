@@ -6,7 +6,7 @@
   <table class="table table-striped">
   <% @productos.each do |producto| %>
     <tr>
-      <td><h3><%= producto.title %></h3></td>
+      <td width="70%"><strong><%= producto.title %></strong></td>
       <td><%= link_to 'Ver', producto_path(producto.id), :class => "btn btn-primary" %></td>
       <td><%= link_to 'Redactar', edit_producto_path(producto.id),  :class => "btn btn-warning" %></td>
       <td><%= link_to 'Eliminar', producto_path(producto.id), :class => "btn btn-danger", method: :delete, data: { confirm: 'Estas seguro?' } %></td>
@@ -15,8 +15,8 @@
     
   </table>
 
-  <div class="panel panel-info">
-    <h4><%= link_to 'Agregar nuevo producto', new_producto_path, :class => "alert-link" %></h4>
+  <div class="alert alert-info" role="alert">
+    <%= link_to 'Agregar nuevo producto', new_producto_path, :class => "alert-link" %>
   </div>
   </div>
 </div>
