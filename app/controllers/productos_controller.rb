@@ -10,7 +10,8 @@ class ProductosController < ApplicationController
   def new
     @producto = Producto.new
 
-    add_breadcrumb "Agregar nuevo producto", ''
+    add_breadcrumb "Listado de productos", productos_path
+    add_breadcrumb "Agregar nuevo producto", new_producto_path, :options => { :title => "Agregar Producto" }
   end
 
   def create
@@ -27,7 +28,8 @@ class ProductosController < ApplicationController
   def edit
     @producto = Producto.find(params[:id])
 
-    add_breadcrumb "Redactar ", '', :options => { :title => @producto.title }
+    add_breadcrumb "Listado de productos", productos_path
+    add_breadcrumb "Redactar producto", new_producto_path, :options => { :title => "Redactar Producto" }
   end
 
   def update
