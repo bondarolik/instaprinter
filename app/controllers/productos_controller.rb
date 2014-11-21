@@ -45,7 +45,7 @@ class ProductosController < ApplicationController
   def show
     @producto = Producto.find(params[:id])
 
-    add_breadcrumb "Producto: ", producto_path(@producto.id), :options => { :title => @producto.title }
+    add_breadcrumb "Producto: #{@producto.title} ", producto_path(@producto.id), :options => { :title => @producto.title }
   end
 
   def destroy
