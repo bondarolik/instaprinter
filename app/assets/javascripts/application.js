@@ -13,12 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery-fileupload/basic
-//= require jquery-fileupload/vendor/tmpl
 //= require bootstrap-sprockets
 //= require bootstrap/alert
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales/es-ES
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl
 //= require_tree .
 
 $(document).on('page:load', function(){
