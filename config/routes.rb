@@ -15,6 +15,8 @@ SpicyOrangesWebsite::Application.routes.draw do
   resources :pages
   resources :productos
 
+  resources :uploads
+
   # special pages
   get 'inicio' => 'pages#inicio', as: :pages_inicio
   get 'empresa' => 'pages#empresa', as: :pages_empresa
