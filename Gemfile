@@ -51,7 +51,7 @@ gem 'paperclip'
 gem 'jquery-fileupload-rails'
 
 # only windows
-#gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # Use unicorn as the app server
 # gem 'unicorn'
