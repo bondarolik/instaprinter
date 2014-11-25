@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '4.1.8
+'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -44,6 +45,10 @@ gem 'bootstrap-wysihtml5-rails'
 gem 'autoprefixer-rails'
 gem 'active_link_to'
 gem "breadcrumbs_on_rails"
+
+# Branch imageuploader
+gem 'paperclip'
+gem 'jquery-fileupload-rails'
 
 # only windows
 #gem 'tzinfo-data', platforms: [:mingw, :mswin]
