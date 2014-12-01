@@ -59,8 +59,8 @@ class UploadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def upload_params
-      #params.require(:upload).permit(:uploaded_file)
-      params[:upload].permit(:uploaded_file)
+      params.require(:upload).permit(:uploaded_file)
+      #params[:upload].permit(:uploaded_file)
     end
 end
 
