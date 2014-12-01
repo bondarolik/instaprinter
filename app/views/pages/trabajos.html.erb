@@ -1,14 +1,17 @@
 <div id="content" class="row">
-<h2>Nuestros Trabajos</h2>
+  <div class="spicycontent col-md-12">
+  <h2>Nuestros Trabajos</h2>
 
-  <div class="row">
-  <% @uploads.each do |upload| %>
-    <div class="col-xs-6 col-md-3">
-       <%= image_tag(upload.uploaded_file(:medium), class: "img-thumbnail")  %>
-    </div>
-  <% end %>
-  </div> 
-  
-  <br/>
+
+    <div class="row">
+    <% @uploads.each do |upload| %>
+      <div class="col-xs-6 col-md-3">
+         <%= image_tag(upload.uploaded_file(:medium), class: "img-thumbnail")  %>
+      </div>
+    <% end %>
+    </div> 
+
+  </div>
+
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
 </div>
