@@ -4,10 +4,11 @@
   </div>
 
   <div class="spicycontent col-md-8">
+  <div class="row">
   <% @uploads.each do |upload| %>
   <div class="media">
     <a class="media-left media-top" href="#">
-      <%= image_tag(upload.uploaded_file(:small), class: 'img-thumbnail')  %>
+      <%= image_tag(upload.uploaded_file(:thumb), class: 'img-thumbnail')  %>
     </a>
     <div class="media-body">
       <%= link_to 'Redactar', edit_upload_path(upload) %>
@@ -15,6 +16,7 @@
     </div>
   </div>
   <% end %>
+  </div>
 
   <p><%= link_to 'Agregar imagenes', new_upload_path, :class => "alert-link", data: { no_turbolink: true } %></p>
   </div>
