@@ -7,7 +7,7 @@
   <% @uploads.each do |upload| %>
   <div class="media">
     <a class="media-left media-top" href="#">
-      <%= image_tag(upload.uploaded_file(:small), class: 'thumb')  %>
+      <%= image_tag(upload.uploaded_file(:small), class: 'img-thumbnail')  %>
     </a>
     <div class="media-body">
       <%= link_to 'Redactar', edit_upload_path(upload) %>
@@ -16,7 +16,7 @@
   </div>
   <% end %>
 
-  <p><%= link_to 'New Upload', new_upload_path, :class => "alert-link", data: { no_turbolink: true } %></p>
+  <p><%= link_to 'Agregar imagenes', new_upload_path, :class => "alert-link", data: { no_turbolink: true } %></p>
   </div>
 
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>

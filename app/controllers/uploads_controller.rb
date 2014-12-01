@@ -63,5 +63,3 @@ class UploadsController < ApplicationController
       params[:upload].permit(:uploaded_file)
     end
 end
-
-#git checkout -b imageuploader origin/imageuploader
