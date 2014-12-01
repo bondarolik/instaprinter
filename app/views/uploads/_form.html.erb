@@ -12,9 +12,9 @@
   <% end %>
 
   <div class="form-group">
-    <p><%= f.label :uploaded_file, "Seleccionar archivos" %></p>
+    <h4><%= f.label :uploaded_file, "Seleccionar archivos" %></h4>
 
-    <p><%= f.file_field :uploaded_file, multiple: true, name: "upload[uploaded_file]", :class => "form-control" %></p>
+    <p><%= f.file_field :uploaded_file, multiple: true, name: 'upload[uploaded_file]' %></p>
 
     <p><%= f.submit "Agregar imagenes", :class => "btn btn-success" %></p>
   </div>
