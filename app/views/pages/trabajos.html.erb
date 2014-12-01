@@ -4,22 +4,14 @@
   </div>
 
   <div class="spicycontent col-md-8">
- 
-  </div>
 
-  <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
-</div>
-
-<div id="imagenav" class="row">
-  <div class="col-md-4">
-    <%= image_tag("aboutus-1.jpg", :class => "img-thumbnail", :width => 300) %>
-  </div>
-
-  <div class="col-md-4">
-    <%= image_tag("aboutus-2.jpg", :class => "img-thumbnail", :width => 300) %>
-  </div>
-
-   <div class="col-md-4">
-    <%= image_tag("aboutus-3.jpg", :class => "img-thumbnail", :width => 300) %>
+  <div class="row">
+  <% @uploads.each do |upload| %>
+    <div class="col-xs-6 col-md-3">
+       <%= image_tag(upload.uploaded_file(:medium), class: "img-thumbnail")  %>
+    </div>
+  <% end %>
   </div> 
+    
+  <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
 </div>

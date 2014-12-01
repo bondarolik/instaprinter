@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def trabajos
     add_breadcrumb "Nuestros Trabajos", pages_empresa_path, :options => { :title => "Quienes Somos" }
+    @uploads = Upload.all
   end
 
   def contacto
