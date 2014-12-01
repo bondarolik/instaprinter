@@ -11,6 +11,7 @@
 
         <li><%= link_to "Ver productos", productos_path %></li>
         <li><%= link_to "Agregar producto", new_producto_path %></li>
+        <li><%= link_to 'Agregar Fotos en Trabajos', new_upload_path, data: { no_turbolink: true } %></li>
       </ul>
 
       <p class="navbar-text navbar-right">Ingresado como <strong><%= current_user.email %></strong>. <%= link_to "Salir", logout_path %></p>      
