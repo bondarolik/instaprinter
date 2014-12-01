@@ -15,7 +15,7 @@
   <div class="col-md-4">
   <h2>Ventanas PVC</h2>
 
-  <p><%= sanitize(truncate(Producto.find(3).description, :ommision => "... Leer mas", :length => 40)) %></p>
+  <p><%= sanitize(truncate(Producto.find(3).description, :ommision => "... Leer mas", :length => 140)) %></p>
 
   <p class="centered"><%= link_to image_tag("button-go.png"), producto_path(3) %></p>
   </div> 
@@ -23,7 +23,7 @@
   <div class="col-md-4">
   <h2>Puertas Protex</h2>
 
-  <p><%= sanitize(truncate(Producto.find(4).description, :ommision => "... Leer mas", :length => 40)) %></p>
+  <p><%= sanitize(truncate(Producto.find(4).description, :ommision => "... Leer mas", :length => 140)) %></p>
 
   <p class="centered"><%= link_to image_tag("button-go.png"), producto_path(4) %></p>
   </div> 
@@ -31,7 +31,7 @@
   <div class="col-md-4">
   <h2>Shower Room</h2>
 
-  <p><%= sanitize(truncate(Producto.find(1).description, :ommision => "... Leer mas", :length => 40)) %></p>
+  <p><%= sanitize(truncate(Producto.find(1).description, :ommision => "... Leer mas", :length => 140)) %></p>
 
   <p class="centered"><%= link_to image_tag("button-go.png"), producto_path(1) %></p>
   </div>     
