@@ -1,13 +1,17 @@
 <div id="content" class="row">
   <div class="col-md-4">
-    <h4>Administrador de imagenes</h4>
+    <div id="sidebar" class="list-group">
+      <h4>Administrador de imagenes</h4>
+
+      <%= link_to "Agregar imagenes", new_upload_path, :class => "list-group-item", data: { no_turbolink: true } %>
+      <%= link_to 'Listado de imagenes', uploads_path,  :class => "list-group-item" %>
+    </div>
   </div>
 
   <div class="spicycontent col-md-8">
 
   <%= render 'form' %>
-
-  <p><%= link_to 'Listado de imagenes', uploads_path %></p>
+  
   </div>
 
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>

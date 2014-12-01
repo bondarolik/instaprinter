@@ -1,9 +1,5 @@
 <div id="content" class="row">
-  <div class="col-md-4">
-    <h2>Nuestros Trabajos</h2>
-  </div>
-
-  <div class="spicycontent col-md-8">
+<h2>Nuestros Trabajos</h2>
 
   <div class="row">
   <% @uploads.each do |upload| %>
@@ -12,6 +8,7 @@
     </div>
   <% end %>
   </div> 
-    
+  
+  <br/>
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
 </div>

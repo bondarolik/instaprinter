@@ -1,24 +1,25 @@
 <div id="content" class="row">
   <div class="col-md-4">
-    <h2>Administrador de imagenes</h2>
+    <div id="sidebar" class="list-group">
+      <h4>Administrador de imagenes</h4>
+
+      <%= link_to "Agregar imagenes", new_upload_path, :class => "list-group-item", data: { no_turbolink: true } %>
+      <%= link_to 'Listado de imagenes', uploads_path,  :class => "list-group-item" %>
+    </div>
   </div>
 
   <div class="spicycontent col-md-8">
+
   <div class="row">
   <% @uploads.each do |upload| %>
-  <div class="media">
-    <a class="media-left media-top" href="#">
-      <%= image_tag(upload.uploaded_file(:thumb), class: 'img-thumbnail')  %>
-    </a>
-    <div class="media-body">
+    <div class="col-xs-6 col-md-3">
+       <%= image_tag(upload.uploaded_file(:medium), class: "img-thumbnail")  %>
       <%= link_to 'Redactar', edit_upload_path(upload) %>
-      <%= link_to 'Eliminar', upload, method: :delete, data: { confirm: 'Estas seguro?' } %>
+      <%= link_to 'Eliminar', upload, method: :delete, data: { confirm: 'Estas seguro?' } %>       
     </div>
-  </div>
   <% end %>
-  </div>
+  </div> 
 
-  <p><%= link_to 'Agregar imagenes', new_upload_path, :class => "alert-link", data: { no_turbolink: true } %></p>
   </div>
 
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
