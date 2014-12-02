@@ -8,6 +8,8 @@ class ProductosController < ApplicationController
   end
 
   def new
+    redirect_to root_path, :notice "Requiere login!" if current_user.nil?
+
     @producto = Producto.new
 
     add_breadcrumb "Listado de productos", productos_path
