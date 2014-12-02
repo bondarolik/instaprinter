@@ -24,10 +24,6 @@
 
 <%= flash_messages %>
 
-<% flash.each do |name, msg| %>
-<%= content_tag :div, msg, :id => "flash_#{name}", :class => "alert alert-warning" %>
-<% end %>
-
 <%= render "breadcrumbs" if current_page?(root_path) == false %>
   
 <%= yield %>
