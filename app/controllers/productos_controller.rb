@@ -17,6 +17,8 @@ class ProductosController < ApplicationController
   end
 
   def create
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+
     #render plain: params[:productos].inspect
     @producto = Producto.new(producto_params)
    
@@ -28,6 +30,8 @@ class ProductosController < ApplicationController
   end
 
   def edit
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+
     @producto = Producto.find(params[:id])
 
     add_breadcrumb "Listado de productos", productos_path
@@ -35,6 +39,8 @@ class ProductosController < ApplicationController
   end
 
   def update
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+
     @producto = Producto.find(params[:id])
    
     if @producto.update(producto_params)
@@ -51,6 +57,8 @@ class ProductosController < ApplicationController
   end
 
   def destroy
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+    
     @producto = Producto.find(params[:id])
     @producto.destroy
    

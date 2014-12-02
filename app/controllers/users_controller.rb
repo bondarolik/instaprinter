@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
   def new
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+
     @user = User.new
   end
 
   def create
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+
     @user = User.create(user_params)
     if @user.save
       warden.set_user(@user)
@@ -14,6 +18,8 @@ class UsersController < ApplicationController
   end
 
   def update
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+    
     #user = User.find(params[:id])
     #user = User.update_attributes!(user_params)
     #redirect_to user

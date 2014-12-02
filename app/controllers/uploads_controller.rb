@@ -14,22 +14,29 @@ class UploadsController < ApplicationController
 
   # GET /uploads/new
   def new
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+
     @upload = Upload.new
   end
 
   # GET /uploads/1/edit
   def edit
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
   end
 
   # POST /uploads
   # POST /uploads.json
   def create
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+
     @upload = Upload.create(upload_params)
   end
 
   # PATCH/PUT /uploads/1
   # PATCH/PUT /uploads/1.json
   def update
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+
     respond_to do |format|
       if @upload.update(upload_params)
         format.html { redirect_to @upload, notice: 'Upload was successfully updated.' }
@@ -44,6 +51,8 @@ class UploadsController < ApplicationController
   # DELETE /uploads/1
   # DELETE /uploads/1.json
   def destroy
+    redirect_to root_path, notice: "Area protegida. Requiere login!" if current_user.nil?
+    
     @upload.destroy
     respond_to do |format|
       format.html { redirect_to uploads_url }
