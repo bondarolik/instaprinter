@@ -24,6 +24,7 @@ SpicyOrangesWebsite::Application.routes.draw do
   get 'contacto' => 'pages#contacto', as: :pages_contacto
 
 
+  match '/send_mail', to: 'pages#send_mail', via: 'post'
   # Products pages
   #get 'productos/showerroom' => 'productos#showerroom', as: :products_showerroom
 

@@ -24,7 +24,7 @@
 
     <br/><br/>
 
-    <%= form_tag sessions_path do %>
+    <%= form_tag(send_mail_path) do %>
       <div class="form-group">
         <%= text_field_tag :name, "", :class => "form-control", :placeholder => "Ej. Juan Ignacio"  %>
       </div>
