@@ -3,7 +3,7 @@ class ProductosController < ApplicationController
   add_breadcrumb "Inicio", :root_path, :options => { :title => "Inicio" }
 
   def index
-    @productos = Producto.all
+    @productos = Producto.all.order(sort_order: :asc)
     add_breadcrumb "Listado de productos", ''
   end
 
