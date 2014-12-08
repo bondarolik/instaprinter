@@ -16,4 +16,12 @@ class PagesController < ApplicationController
   def contacto
     add_breadcrumb "Contacto", pages_contacto_path, :options => { :title => "Contacto" }
   end
+
+  def send_email
+    name = params[:name]
+    email = params[:email]
+    body = params[:message]
+    ContactMailer.contact_email(name, email, body).deliver
+    redirect_to pages_contacto_path, notice: "Hemos recibido su mensaje. En brevedad le responderemos. Muchas gracias!"  
+  end
 end
