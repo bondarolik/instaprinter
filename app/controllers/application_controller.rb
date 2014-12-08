@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   #before_action :require_login
 
   def product_list
-    @productos_links = Producto.all.order(sort_order: "ASC")
+    @productos_links = Producto.all.order(sort_order: :asc)
   end
   helper_method :product_list
 
