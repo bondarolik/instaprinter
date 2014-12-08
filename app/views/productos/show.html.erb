@@ -10,7 +10,11 @@
   </div>
 
   <div class="spicycontent col-md-8">
+  <%= content_tag(:h3, @producto.title) %>
+
   <%= @producto.description.html_safe %>
+
+  <p><%= image_tag("#{@producto.slug}.jpg", class: "img-thumbnail")  %></p>
   </div>
 
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
