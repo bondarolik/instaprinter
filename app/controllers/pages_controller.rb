@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     add_breadcrumb "Contacto", pages_contacto_path, :options => { :title => "Contacto" }
   end
 
-  def send_email
+  def send_mail
     name = params[:name]
     email = params[:email]
     body = params[:message]
