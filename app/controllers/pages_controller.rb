@@ -21,7 +21,7 @@ class PagesController < ApplicationController
     name = params[:name]
     email = params[:email]
     body = params[:message]
-    ContactMailer.contact_email(name, email, body).deliver
+    FeedbackMailer.contact_email(name, email, body).deliver
     redirect_to pages_contacto_path, notice: "Hemos recibido su mensaje. En brevedad le responderemos. Muchas gracias!"  
   end
 end
