@@ -6,6 +6,6 @@ class FeedbackMailer < ActionMailer::Base
     @email = email
     @body = body
 
-    mail(from: email, subject "Feedback Alumart.cl de #{name}")
+    mail(from: email, subject: "Feedback Alumart.cl de #{name}")
   end
 end
