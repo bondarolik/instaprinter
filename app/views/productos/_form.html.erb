@@ -12,18 +12,23 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :title, "Titulo de producto" %>
+    <%= f.label :title, "Titulo de producto:" %>
     <%= f.text_field :title, :class => "form-control" %>
   </div>
 
 
   <div class="form-group">
-    <%= f.label :slug, "Slug para url (sin espacios)" %>
+    <%= f.label :slug, "Slug para url y imagen de producto (sin espacios):" %>
     <%= f.text_field :slug, :class => "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :description, "Texto" %>
+    <%= f.label :sort_order, "Numero de orden en menu:" %>
+    <%= f.text_field :sort_order, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, "Texto:" %>
     <%= f.text_area :description, :class => "wysihtml5 form-control" %>
   </div>
  
