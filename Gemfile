@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8
-'
+gem 'rails', '4.1.8'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -40,9 +39,11 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'warden'
 
-gem 'bootstrap-sass', '~> 3.3.0'
+gem 'bootstrap-sass', '~> 3.3.1'
 gem 'bootstrap-wysihtml5-rails'
 gem 'autoprefixer-rails'
+
+# Other stuff
 gem 'active_link_to'
 gem "breadcrumbs_on_rails"
 
