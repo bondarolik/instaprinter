@@ -1,6 +1,6 @@
 class FeedbackMailer < ActionMailer::Base
-  #default to: "gobets96@gmail.com"
-  default to: "ventas@alumart.cl"
+  default to: "gobets96@gmail.com"
+  #default to: "ventas@alumart.cl"
 
   def feedback_email(name, email, body)
     @name = name
