@@ -6,10 +6,8 @@ class FeedbackMailer < ActionMailer::Base
     @name = name
     @email = email
     @body = body
-    delivery_options = { user_name: "ventas@alumart.cl",
-                         password: "starsfgd",
-                         address: "smtp.gmail.com" }
+    #delivery_options = { user_name: "ventas@alumart.cl", password: "starsfgd", address: "smtp.gmail.com" }
 
-    mail(from: email, subject: "Feedback Alumart.cl de #{name}", delivery_method_options: delivery_options)
+    mail(from: email, subject: "Feedback Alumart.cl de #{name}")
   end
 end
