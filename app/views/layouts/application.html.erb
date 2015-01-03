@@ -22,7 +22,12 @@
 <%= render "navbar" if current_user %>
 <%= render "header" %>
 
-<%= flash_messages %>
+
+
+<div class="row">
+  <%= flash_messages %>
+</div>
+
 
 <%= render "breadcrumbs" if current_page?(root_path) == false %>
   
