@@ -1,0 +1,35 @@
+<%= form_for @banner do |f| %>
+  <% if @banner.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@banner.errors.count, "error") %> prohibited
+      this article from being saved:</h2>
+    <ul>
+    <% @banner.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title, "Titulo de promocion:" %>
+    <%= f.text_field :title, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, "Texto:" %>
+    <%= f.text_area :description, :class => "wysihtml5 form-control" %>
+  </div>
+ 
+  <button type="submit" class="btn btn-success">Agregar promo</button>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  })
+</script>

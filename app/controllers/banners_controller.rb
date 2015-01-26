@@ -1,4 +1,4 @@
-class HomebannersController < ApplicationController
+class BannersController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
   add_breadcrumb "Inicio", :root_path, :options => { :title => "Inicio" }
 
@@ -12,8 +12,8 @@ class HomebannersController < ApplicationController
 
     @banner = Banner.new
 
-    add_breadcrumb "Listado de promociones", homebanners_path
-    add_breadcrumb "Agregar nueva promocion", new_homebanner_path, :options => { :title => "Agregar Promocion" }
+    add_breadcrumb "Listado de promociones", banners_path
+    add_breadcrumb "Agregar nueva promocion", new_banner_path, :options => { :title => "Agregar Promocion" }
   end
 
   def create
@@ -34,8 +34,8 @@ class HomebannersController < ApplicationController
 
     @banner = Banner.find(params[:id])
 
-    add_breadcrumb "Listado de promociones", homebanners_path
-    add_breadcrumb "Redactar promocion", new_homebanner_path, :options => { :title => "Redactar Producto" }
+    add_breadcrumb "Listado de promociones", banners_path
+    add_breadcrumb "Redactar promocion", new_banner_path, :options => { :title => "Redactar Producto" }
   end
 
   def update
@@ -53,7 +53,7 @@ class HomebannersController < ApplicationController
   def show
     @banner = Banner.find(params[:id])
 
-    add_breadcrumb "Promocion: #{@banner.title} ", homebanner_path(@producto.id), :options => { :title => @banner.title }
+    add_breadcrumb "Promocion: #{@banner.title} ", banner_path(@producto.id), :options => { :title => @banner.title }
   end
 
   def destroy
@@ -62,7 +62,7 @@ class HomebannersController < ApplicationController
     @banner = Banner.find(params[:id])
     @banner.destroy
    
-    redirect_to homebanners_path
+    redirect_to banners_path
   end
 
 private
