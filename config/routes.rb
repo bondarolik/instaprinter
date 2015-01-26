@@ -14,6 +14,7 @@ SpicyOrangesWebsite::Application.routes.draw do
 
   resources :pages
   resources :productos
+  resources :homebanners
 
   resources :uploads
 

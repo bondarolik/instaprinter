@@ -62,7 +62,7 @@ class HomebannerController < ApplicationController
     @banner = Banner.find(params[:id])
     @banner.destroy
    
-    redirect_to banners_path
+    redirect_to homebanners_path
   end
 
 private
