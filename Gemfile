@@ -50,6 +50,7 @@ gem "breadcrumbs_on_rails"
 # Branch imageuploader
 gem 'paperclip'
 gem 'jquery-fileupload-rails'
+gem 'fancybox2-rails'
 
 # only windows
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
