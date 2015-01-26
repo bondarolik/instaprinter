@@ -1,2 +1,2 @@
-module HomebannerHelper
+module HomebannesHelper
 end
