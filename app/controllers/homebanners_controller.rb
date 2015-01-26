@@ -1,4 +1,4 @@
-class HomebannerController < ApplicationController
+class HomebannersController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
   add_breadcrumb "Inicio", :root_path, :options => { :title => "Inicio" }
 
