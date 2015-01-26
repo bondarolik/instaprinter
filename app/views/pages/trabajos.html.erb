@@ -8,7 +8,9 @@
     <div class="row">
     <% @uploads.each do |upload| %>
       <div class="col-xs-6 col-md-3">
-         <%= image_tag(upload.uploaded_file(:medium), class: "img-thumbnail")  %>
+      <a href="#" class="thumbnail">
+         <%= image_tag(upload.uploaded_file(:small), class: "img-thumbnail")  %>
+      </a>
       </div>
     <% end %>
     </div> 
