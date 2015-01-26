@@ -53,7 +53,7 @@ class BannersController < ApplicationController
   def show
     @banner = Banner.find(params[:id])
 
-    add_breadcrumb "Promocion: #{@banner.title} ", banner_path(@producto.id), :options => { :title => @banner.title }
+    add_breadcrumb "Promocion: #{@banner.title} ", banner_path(@banner.id), :options => { :title => @banner.title }
   end
 
   def destroy
