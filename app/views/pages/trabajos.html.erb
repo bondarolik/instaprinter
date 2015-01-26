@@ -8,9 +8,7 @@
     <div class="row">
     <% @uploads.each do |upload| %>
       <div class="col-xs-6 col-md-3">
-      <a href="#" class="thumbnail">
-         <%= image_tag(upload.uploaded_file(:small), :height => "200", :width => "200")  %>
-      </a>
+      <%= link_to image_tag(upload.uploaded_file(:small), :height => "200", :width => "200"), upload.uploaded_file(:small), :class => "thumbnail" %>
       </div>
     <% end %>
     </div> 
@@ -19,3 +17,10 @@
 
   <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.thumbnail').modal('toggle')
+  })
+</script>
