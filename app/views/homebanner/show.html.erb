@@ -1,0 +1,24 @@
+<% title @producto.title.to_s %>
+
+<div id="content" class="row">
+  <div class="col-md-4">
+    <h2>Nuestros Productos</h2>
+
+    <div id="sidebar" class="list-group">
+    <% product_list.each do |p| %>
+      <%= link_to p.title, producto_path(p.id), :class => "list-group-item #{active_link_to_class(producto_path(p.id), :active => :inclusive)}" %>
+    <% end %>
+    </div>
+  </div>
+
+  <div class="spicycontent col-md-8">
+  <%= content_tag(:h3, @producto.title) %>
+
+  <%= @producto.description.html_safe %>
+
+  <br/>
+  <p><%= image_tag("#{@producto.slug}.jpg", class: "img-thumbnail")  %></p>
+  </div>
+
+  <%= image_tag("feedbacks.png", :class => "spicysep col-md-12") %>
+</div>

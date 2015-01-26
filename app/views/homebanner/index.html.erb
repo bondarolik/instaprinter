@@ -1,0 +1,25 @@
+<% title "Indice de productos" %>
+
+<div id="content" class="row">
+  <div class="col-md-12">
+
+  <h2>Listado de productos</h2>
+
+  <table class="table table-striped">
+  <% @productos.each do |producto| %>
+    <tr>
+      <td><strong><%= producto.sort_order %></strong></td>
+      <td width="70%"><strong><%= producto.title %></strong></td>
+      <td><%= link_to 'Ver', producto_path(producto.id), :class => "btn btn-primary" %></td>
+      <td><%= link_to 'Redactar', edit_producto_path(producto.id),  :class => "btn btn-warning" %></td>
+      <td><%= link_to 'Eliminar', producto_path(producto.id), :class => "btn btn-danger", method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+    </tr>
+  <% end %>
+    
+  </table>
+
+  <div class="alert alert-info" role="alert">
+    <%= link_to 'Agregar nuevo producto', new_producto_path, :class => "alert-link" %>
+  </div>
+  </div>
+</div>

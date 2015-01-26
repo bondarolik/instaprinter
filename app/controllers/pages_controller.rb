@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   add_breadcrumb "Inicio", :root_path, :options => { :title => "Inicio" }
 
   def inicio
+    @banner = Banner.last
   end
 
   def empresa
