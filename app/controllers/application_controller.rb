@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :product_list
 
+  def banners_list
+    @banners_list = Banner.all
+  end
+  helper_method :banners_list
+
 
 private
   def current_user
