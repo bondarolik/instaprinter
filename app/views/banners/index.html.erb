@@ -1,0 +1,25 @@
+<% title "Indice de promocos" %>
+
+<div id="content" class="row">
+  <div class="col-md-12">
+
+  <h2>Listado de promociones</h2>
+
+  <table class="table table-striped">
+  <% @banners.each do |bn| %>
+    <tr>
+      <td width="20%"><strong><%= bn.title %></strong></td>
+      <td width="65%"><strong><%= bn.description  %></strong></td>
+      <td><%= link_to 'Ver', banner_path(bn.id), :class => "btn btn-primary" %></td>
+      <td><%= link_to 'Redactar', edit_banner_path(bn.id),  :class => "btn btn-warning" %></td>
+      <td><%= link_to 'Eliminar', banner_path(bn.id), :class => "btn btn-danger", method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+    </tr>
+  <% end %>
+    
+  </table>
+
+  <div class="alert alert-info" role="alert">
+    <%= link_to 'Agregar nueva promo', new_banner_path, :class => "alert-link" %>
+  </div>
+  </div>
+</div>
