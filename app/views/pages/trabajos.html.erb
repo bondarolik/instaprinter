@@ -8,7 +8,7 @@
     <div class="row">
     <% @uploads.each do |upload| %>
       <div class="col-xs-6 col-md-3">
-      <%= link_to image_tag(upload.uploaded_file(:small), :height => "200", :width => "200"), upload.uploaded_file(:small), :class => "thumbnail" %>
+      <%= link_to image_tag(upload.uploaded_file(:small), :height => "200", :width => "200"), upload.uploaded_file(:large), :class => "thumbnail" %>
       </div>
     <% end %>
     </div> 
@@ -20,7 +20,6 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-
-    $('.thumbnail').modal('toggle')
+    $('.thumbnail').modal('toggle');
   })
 </script>
