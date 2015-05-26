@@ -25,4 +25,8 @@ class PagesController < ApplicationController
     FeedbackMailer.feedback_email(name, email, body).deliver
     redirect_to pages_contacto_path, notice: "Hemos recibido su mensaje. En brevedad le responderemos. Muchas gracias!"  
   end
+
+  def google61c568212e0679f5
+    render layout: false
+  end
 end
